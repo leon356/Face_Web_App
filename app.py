@@ -21,6 +21,7 @@ def index():
         username = request.form.get("username", "").strip().upper()
         fan = 'fan' in request.form
         lights = 'lights' in request.form
+        second_led = 'second_led' in request.form
         duration = int(request.form.get("duration", 30))  # default 30s
 
         if file and allowed(file.filename) and username:
@@ -36,6 +37,7 @@ def index():
                 "name": username,
                 "fan": fan,
                 "lights": lights,
+                "second_led": second_led,
                 "duration": duration
             }
             config_bytes = json.dumps(config).encode()
