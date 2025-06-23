@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Upload Face</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px;
+        font-family: sans-serif;
+      }
+      input, button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload Your Selfie</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" name="username" placeholder="Enter your name" required><br>
+      <input type="file" name="selfie" accept="image/*" capture="user" required><br>
+      <button type="submit">📤 Upload</button>
+    </form>
+  </body>
+</html>
